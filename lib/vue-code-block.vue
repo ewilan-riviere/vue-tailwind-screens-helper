@@ -1,5 +1,9 @@
 <template>
-  <div class="code-block" style="position: relative;">
+  <div
+    :class="{ margin: hasMargin }"
+    class="code-block"
+    style="position: relative;"
+  >
     <div v-if="notReachable" class="not-reachable"></div>
     <div :class="['code-heading', colorClass]">
       <span v-if="path">
@@ -22,6 +26,10 @@ export default {
     path: {
       type: String,
       default: '',
+    },
+    hasMargin: {
+      type: Boolean,
+      default: true,
     },
     notReachable: {
       type: Boolean,

@@ -60,6 +60,7 @@ Use it in a `.vue` file
 |--------------|---------|---------|----------------------------------------------------------------------------|
 | ext          | String  | ''      | Extension of file, display it on header and get correct color if available |
 | path         | String  | ''      | Path of the file, useful if it's guide for a framework                     |
+| hasMargin    | Boolean | true    | To get margin top and bottom                               |
 | notReachable | Boolean | false   | To apply a layer to prevent user to get code                               |
 
 ## **License**
