@@ -1,6 +1,6 @@
 <template>
   <div>
-    <code-block>
+    <code-block ext="js" path="path/to/index.js">
       <code-example></code-example>
     </code-block>
   </div>
