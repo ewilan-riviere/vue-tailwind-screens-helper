@@ -3,9 +3,9 @@
     <p>
       This is a block of code.
     </p>
-    <code-block ext="js" path="path/to/index.js">
+    <code-info ext="js" path="path/to/index.js">
       <code-example></code-example>
-    </code-block>
+    </code-info>
     <p>
       It's sooo beautiful!
     </p>

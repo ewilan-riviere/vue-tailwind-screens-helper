@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueCodeBlock from '../index'
+import VuepressCodeInfo from '../index'
 
 // for markdown style
 import './css/air.css'
 
 Vue.config.productionTip = false
 
-Vue.use(VueCodeBlock, {
+Vue.use(VuepressCodeInfo, {
   option: 'option',
 })
 

@@ -1,6 +1,6 @@
 {
-  "name": "vue-code-block",
-  "version": "0.2.24",
+  "name": "vuepress-code-info",
+  "version": "0.3.0",
   "author": {
     "name": "Ewilan 'EwieFairy' Rivière",
     "email": "ewilan@dotslashplay.it",
@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ewilan-riviere/vue-code-block"
+    "url": "https://github.com/ewilan-riviere/vue-code-info"
   },
   "license": "MIT",
   "private": false,
-  "homepage": "https://ewilan-riviere.github.io/documentation/vue-code-block/",
+  "homepage": "https://ewilan-riviere.github.io/documentation/vue-code-info/",
   "scripts": {
     "dev": "vue serve example/main.js",
     "lint": "eslint --ext .js,.vue src"
