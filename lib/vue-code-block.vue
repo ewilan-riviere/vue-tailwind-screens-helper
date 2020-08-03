@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="{ margin: hasMargin }"
+    :class="{ 'code-block-margin': hasMargin }"
     class="code-block"
     style="position: relative;"
   >
