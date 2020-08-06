@@ -1,22 +1,9 @@
 <template>
   <div>
-    <p>
-      This is a block of code.
-    </p>
-    <code-info ext="js" path="path/to/index.js">
-      <code-example></code-example>
-    </code-info>
-    <p>
-      It's sooo beautiful!
-    </p>
+    <tailwind-screens></tailwind-screens>
   </div>
 </template>
 
 <script>
-import codeExample from './code.md'
-export default {
-  components: {
-    codeExample,
-  },
-}
+export default {}
 </script>
