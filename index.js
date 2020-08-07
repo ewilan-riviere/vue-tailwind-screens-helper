@@ -1,4 +1,4 @@
-import TailwindScreens from './lib/tailwind-screens.vue'
+import TailwindScreensHelper from './lib/tailwind-screens-helper.vue'
 // import VueClipboard from 'vue-clipboard2'
 // import Toasted from 'vue-toasted'
 
@@ -10,7 +10,7 @@ export default {
     if (options) {
       // Vue.prototype.$option = options.option
     }
-    Vue.component('tailwind-screens', TailwindScreens)
+    Vue.component('tailwind-screens', TailwindScreensHelper)
 
     // to avoid rerror when build cause by vue-toast
     // if (!isServer) {

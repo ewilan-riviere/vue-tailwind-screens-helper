@@ -1,40 +1,83 @@
-# **Vue Tailwind Screens**
+# **Vue Tailwind Screens** <!-- omit in toc -->
 
-[![](https://img.shields.io/npm/v/vue-tailwind-screens.svg?style=flat-square&color=cb3837&logo=npm&logoColor=ffffff)](https://www.npmjs.com/package/vue-tailwind-screens)
-[![](https://img.shields.io/github/license/ewilan-riviere/vuepress-theme-useweb.svg?style=flat-square&color=f05032&logo=git&logoColor=ffffff)](https://github.com/ewilan-riviere/vue-tailwind-screens/blob/master/LICENSE)
+[![](https://img.shields.io/npm/v/vue-tailwind-screens-helper.svg?style=flat-square&color=cb3837&logo=npm&logoColor=ffffff)](https://www.npmjs.com/package/vue-tailwind-screens-helper)
+[![](https://img.shields.io/github/license/ewilan-riviere/vuepress-theme-useweb.svg?style=flat-square&color=f05032&logo=git&logoColor=ffffff)](https://github.com/ewilan-riviere/vue-tailwind-screens-helper/blob/master/LICENSE)
 
 [![node.js](https://img.shields.io/static/v1?label=Node.js&message=v11.15&color=339933&style=flat-square&logo=node.js&logoColor=ffffff)](https://nodejs.org/en/)
 [![vue.js](https://img.shields.io/static/v1?label=Vue.js&message=v2.6&color=4FC08D&style=flat-square&logo=vue.js&logoColor=ffffff)](https://vuejs.org/)
+[![tailwindcss](https://img.shields.io/static/v1?label=TailwindCSS&message=v1.4&color=38B2AC&style=flat-square&logo=tailwind-css&logoColor=ffffff)](https://tailwindcss.com)
 
-Display a header to code blocks in markdown for example with color of language and option for file path. It's for guides about plugins or frameworks.
+Display an helper at th left bottom corner in **development mode**, this helper display current breakpoint (xs, sm, md, lg or xl) with icon and exact window width in pixels.
 
-![vue-tailwind-screens](./lib/assets/vue-tailwind-screens-example.jpg)
+**You can click on it to hide it**
 
-## **Documentation**
+![vue-tailwind-screens-helper](./example/vue-tailwind-screens-helper.jpg)
+
+- [**I. Download package**](#i-download-package)
+- [**II. Setup**](#ii-setup)
+  - [*II. a. With Vue-CLI*](#ii-a-with-vue-cli)
+  - [*II. b. With Nuxt.js*](#ii-b-with-nuxtjs)
+- [**III. Usage**](#iii-usage)
+  - [*III. a. With Vue-CLI*](#iii-a-with-vue-cli)
+  - [*III. b. With Nuxt.js*](#iii-b-with-nuxtjs)
+- [**IV. API**](#iv-api)
+- [**License**](#license)
+
+## **I. Download package**
 
 Install it with Yarn or NPM
 
 ```bash
-yarn add -D vue-tailwind-screens
+yarn add -D vue-tailwind-screens-helper
 ```
 
 **OR**
 
 ```bash
-npm i vue-tailwind-screens --save-dev
+npm i vue-tailwind-screens-helper --save-dev
 ```
+
+---
+
+## **II. Setup**
+
+### *II. a. With Vue-CLI*
 
 Import it, ES6 way, in `main.js` / `app.js` file
 
 ```js
-import TailwindScreens from 'vue-tailwind-screens'
+import TailwindScreensHelper from 'vue-tailwind-screens-helper'
 
-Vue.use(TailwindScreens)
+Vue.use(TailwindScreensHelper)
 ```
 
-### *Usage*
+### *II. b. With Nuxt.js*
 
-Use it in a `.vue` file
+Create a `plugins`: `plugins/vue-tailwind-screens.js`
+
+```js
+import Vue from 'vue'
+import TailwindScreensHelper from 'vue-tailwind-screens-helper'
+
+Vue.use(TailwindScreensHelper)
+```
+
+Import plugin into `nuxt.config.js`
+
+```js
+plugins: [
+  // ...
+  { src: '~/plugins/vue-tailwind-screens', mode: 'client' },
+],
+```
+
+---
+
+## **III. Usage**
+
+### *III. a. With Vue-CLI*
+
+Use it in a `.vue` file, like `App.vue`
 
 ```vue
 <template>
@@ -44,7 +87,21 @@ Use it in a `.vue` file
 </template>
 ```
 
-### *API*
+### *III. b. With Nuxt.js*
+
+Use it in a `vue` file, like `layouts/default.vue`, don't forget to add `client-only` to setup it properly.
+
+```vue
+<template>
+  <client-only>
+      <tailwind-screens />
+    </client-only>
+</template>
+```
+
+---
+
+## **IV. API**
 
 | Props        | Type    | Default | Describe                                                                   |
 |--------------|---------|---------|----------------------------------------------------------------------------|
@@ -52,6 +109,8 @@ Use it in a `.vue` file
 | path         | String  | ''      | Path of the file, useful if it's guide for a framework                     |
 | hasMargin    | Boolean | true    | To get margin top and bottom                               |
 | notReachable | Boolean | false   | To apply a layer to prevent user to get code                               |
+
+---
 
 ## **License**
 
