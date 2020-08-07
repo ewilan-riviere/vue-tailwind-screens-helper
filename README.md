@@ -1,4 +1,4 @@
-# **Vue Tailwind Screens** <!-- omit in toc -->
+# **Vue Tailwind Screens Helper** <!-- omit in toc -->
 
 [![](https://img.shields.io/npm/v/vue-tailwind-screens-helper.svg?style=flat-square&color=cb3837&logo=npm&logoColor=ffffff)](https://www.npmjs.com/package/vue-tailwind-screens-helper)
 [![](https://img.shields.io/github/license/ewilan-riviere/vuepress-theme-useweb.svg?style=flat-square&color=f05032&logo=git&logoColor=ffffff)](https://github.com/ewilan-riviere/vue-tailwind-screens-helper/blob/master/LICENSE)
@@ -104,12 +104,14 @@ Use it in a `vue` file, like `layouts/default.vue`, don't forget to add `client-
 
 ## **IV. API**
 
-| Props        | Type    | Default | Describe                                                                   |
+*In future version, to use it without Tailwind CSS*
+
+<!-- | Props        | Type    | Default | Describe                                                                   |
 |--------------|---------|---------|----------------------------------------------------------------------------|
 | ext          | String  | ''      | Extension of file, display it on header and get correct color if available |
 | path         | String  | ''      | Path of the file, useful if it's guide for a framework                     |
 | hasMargin    | Boolean | true    | To get margin top and bottom                               |
-| notReachable | Boolean | false   | To apply a layer to prevent user to get code                               |
+| notReachable | Boolean | false   | To apply a layer to prevent user to get code                               | -->
 
 ---
 
