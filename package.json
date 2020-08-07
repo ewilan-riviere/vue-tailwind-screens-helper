@@ -28,10 +28,10 @@
     "vue-markdown-loader": "^2.4.1",
     "webpack": "^4.44.1"
   },
-  "homepage": "https://ewilan-riviere.github.io/documentation/vue-code-info/",
+  "homepage": "https://ewilan-riviere.github.io/documentation/vue-tailwind-screens-helper/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ewilan-riviere/vue-code-info"
+    "url": "https://github.com/ewilan-riviere/vue-tailwind-screens-helper"
   }
 }

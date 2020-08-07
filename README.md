@@ -21,6 +21,7 @@ Display an helper at th left bottom corner in **development mode**, this helper 
   - [*III. a. With Vue-CLI*](#iii-a-with-vue-cli)
   - [*III. b. With Nuxt.js*](#iii-b-with-nuxtjs)
 - [**IV. API**](#iv-api)
+- [**V. Tailwind breakpoints**](#v-tailwind-breakpoints)
 - [**License**](#license)
 
 ## **I. Download package**
@@ -109,6 +110,29 @@ Use it in a `vue` file, like `layouts/default.vue`, don't forget to add `client-
 | path         | String  | ''      | Path of the file, useful if it's guide for a framework                     |
 | hasMargin    | Boolean | true    | To get margin top and bottom                               |
 | notReachable | Boolean | false   | To apply a layer to prevent user to get code                               |
+
+---
+
+## **V. Tailwind breakpoints**
+
+You can change Tailwind CSS breakpoints into `tailwind.config.js`, helper will adapt it-self when breakpoints change.
+
+```js
+module.exports = {
+  theme: {
+    // ...
+    extend: {
+      // ...
+      screens: {
+        xl: '1600px',
+        lg: '1000px',
+        md: '770px',
+        sm: '400px',
+      },
+    },
+  },
+}
+```
 
 ---
 
