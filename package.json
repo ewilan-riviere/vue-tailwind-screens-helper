@@ -1,12 +1,21 @@
 {
   "name": "vue-tailwind-screens-helper",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "private": false,
   "author": {
     "name": "Ewilan 'EwieFairy' Rivière",
     "email": "ewilan@dotslashplay.it",
     "url": "https://github.com/ewilan-riviere"
   },
+  "keywords": [
+    "vuejs",
+    "vue",
+    "nuxt",
+    "nuxtjs",
+    "tailwind",
+    "tailwindcss",
+    "breakpoint"
+  ],
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
     "dev": "vue serve example/main.js"
