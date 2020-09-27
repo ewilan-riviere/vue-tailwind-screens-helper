@@ -5,7 +5,7 @@
 
 [![node.js](https://img.shields.io/static/v1?label=Node.js&message=v11.15&color=339933&style=flat-square&logo=node.js&logoColor=ffffff)](https://nodejs.org/en/)
 [![vue.js](https://img.shields.io/static/v1?label=Vue.js&message=v2.6&color=4FC08D&style=flat-square&logo=vue.js&logoColor=ffffff)](https://vuejs.org/)
-[![tailwindcss](https://img.shields.io/static/v1?label=TailwindCSS&message=v1.4&color=38B2AC&style=flat-square&logo=tailwind-css&logoColor=ffffff)](https://tailwindcss.com)
+[![tailwindcss](https://img.shields.io/static/v1?label=TailwindCSS&message=v1.8&color=38B2AC&style=flat-square&logo=tailwind-css&logoColor=ffffff)](https://tailwindcss.com)
 
 Display an helper at th left bottom corner in **development mode**, this helper display current breakpoint (xs, sm, md, lg or xl) with icon and exact window width in pixels.
 
@@ -47,9 +47,9 @@ npm i vue-tailwind-screens-helper --save-dev
 Import it, ES6 way, in `main.js` / `app.js` file
 
 ```js
-import TailwindScreensHelper from 'vue-tailwind-screens-helper'
+import TailwindHelper from 'vue-tailwind-screens-helper'
 
-Vue.use(TailwindScreensHelper)
+Vue.use(TailwindHelper)
 ```
 
 ### *II. b. With Nuxt.js*
@@ -58,9 +58,9 @@ Create a `plugins`: `plugins/vue-tailwind-screens.js`
 
 ```js
 import Vue from 'vue'
-import TailwindScreensHelper from 'vue-tailwind-screens-helper'
+import TailwindHelper from 'vue-tailwind-screens-helper'
 
-Vue.use(TailwindScreensHelper)
+Vue.use(TailwindHelper)
 ```
 
 Import plugin into `nuxt.config.js`
@@ -83,7 +83,7 @@ Use it in a `.vue` file, like `App.vue`
 ```vue
 <template>
   <div>
-    <tailwind-screens />
+    <tailwind-helper />
   </div>
 </template>
 ```
@@ -95,7 +95,7 @@ Use it in a `vue` file, like `layouts/default.vue`, don't forget to add `client-
 ```vue
 <template>
   <client-only>
-      <tailwind-screens />
+      <tailwind-helper />
     </client-only>
 </template>
 ```

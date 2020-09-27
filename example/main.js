@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
-import TailwindScreens from '../index'
+import TailwindHelper from '../index'
 
-// for markdown style
 import './css/tailwind.css'
 
 Vue.config.productionTip = false
 
-Vue.use(TailwindScreens, {
+Vue.use(TailwindHelper, {
   option: 'option',
 })
 

@@ -14,13 +14,13 @@
 </template>
 
 <script>
-import { icons } from "./icons";
+import { icons } from './icons'
 
 export default {
   props: {
     name: {
       type: String,
-      default: "svg-model",
+      default: 'svg-model',
     },
     size: {
       type: Number,
@@ -29,8 +29,8 @@ export default {
   },
   computed: {
     svgIcon() {
-      return icons[this.name];
+      return icons[this.name]
     },
   },
-};
+}
 </script>

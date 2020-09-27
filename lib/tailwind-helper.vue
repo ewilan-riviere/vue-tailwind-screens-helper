@@ -40,7 +40,7 @@
 <script>
 import icon from './icon.vue'
 export default {
-  name: 'TailwindScreens',
+  name: 'TailwindHelper',
   data() {
     return {
       isDevEnv: process.env.NODE_ENV === 'development',

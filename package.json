@@ -1,6 +1,6 @@
 {
   "name": "vue-tailwind-screens-helper",
-  "version": "0.0.12",
+  "version": "0.1.0",
   "private": false,
   "author": {
     "name": "Ewilan 'EwieFairy' Rivière",
@@ -21,21 +21,14 @@
     "dev": "vue serve example/main.js"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.2.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint": "^7.10.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^6.1.2",
-    "prettier": "^2.0.5",
-    "stylelint": "^13.6.1",
-    "stylelint-plugin-stylus": "^0.9.0",
-    "stylus": "^0.54.8",
-    "stylus-loader": "^3.0.2",
-    "vue-cli-plugin-markdown": "~0.1.2",
-    "vue-cli-plugin-tailwind": "~1.4.1",
-    "vue-markdown-loader": "^2.4.1",
-    "webpack": "^4.44.1"
+    "prettier": "^2.1.2",
+    "vue-cli-plugin-tailwind": "~1.5.0"
   },
   "homepage": "https://ewilan-riviere.github.io/documentation/vue-tailwind-screens-helper/",
   "license": "MIT",
