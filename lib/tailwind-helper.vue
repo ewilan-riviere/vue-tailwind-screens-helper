@@ -1,14 +1,17 @@
 <template>
   <div
-    v-if="isDevEnv"
+    v-if="forceDisplay ? true : isDevEnv"
     class="fixed flex justify-around helper screen-label"
-    :class="
-      toggle ? 'bg-green-600 bg-opacity-75' : 'bg-green-600 bg-opacity-25'
-    "
+    :class="[
+      toggle ? 'bg-green-600 bg-opacity-75' : 'bg-green-600 bg-opacity-50',
+      sneak
+        ? 'bottom-0 left-0 p-2 rounded-tr-sm'
+        : 'bottom-4 left-4 rounded-lg p-4',
+    ]"
     @click="toggle = !toggle"
   >
     <div v-if="toggle">
-      <div>
+      <div v-if="!sneak">
         <div class="flex sm:hidden">
           xs
           <icon name="xs" />
@@ -29,7 +32,25 @@
           xl
           <icon name="xl" />
         </div>
-        <div class="flex mx-auto my-auto text-sm" style="width: max-content;">
+        <div
+          class="flex mx-auto my-auto text-sm"
+          style="width: max-content"
+          v-if="pixels"
+        >
+          {{ screenWidth }} px
+        </div>
+      </div>
+      <div v-else class="flex text-lg">
+        <div class="flex sm:hidden">xs</div>
+        <div class="hidden sm:flex md:hidden">sm</div>
+        <div class="hidden md:flex lg:hidden">md</div>
+        <div class="justify-around hidden lg:flex xl:hidden">lg</div>
+        <div class="hidden xl:flex">xl</div>
+        <div
+          class="flex mx-auto my-auto ml-2 text-sm"
+          style="width: max-content"
+          v-if="pixels"
+        >
           {{ screenWidth }} px
         </div>
       </div>
@@ -41,6 +62,20 @@
 import icon from './icon.vue'
 export default {
   name: 'TailwindHelper',
+  props: {
+    sneak: {
+      type: Boolean,
+      default: false,
+    },
+    pixels: {
+      type: Boolean,
+      default: true,
+    },
+    forceDisplay: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       isDevEnv: process.env.NODE_ENV === 'development',
@@ -68,12 +103,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .helper {
-  bottom: 1rem;
-  left: 1rem;
   z-index: 1000;
-  @apply text-white font-bold text-xl uppercase p-4 transition-colors duration-300 rounded-lg shadow-md cursor-pointer;
+  @apply text-white font-bold text-xl uppercase transition-colors duration-300 shadow-md cursor-pointer;
 }
 .helper:hover {
   @apply bg-opacity-100;
