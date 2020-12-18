@@ -8,9 +8,12 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
-    "vue/no-parsing-error": ["error", {
-      "unexpected-question-mark-instead-of-tag-name": false,
-    }],
+    'vue/no-parsing-error': [
+      'error',
+      {
+        'unexpected-question-mark-instead-of-tag-name': false,
+      },
+    ],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   },

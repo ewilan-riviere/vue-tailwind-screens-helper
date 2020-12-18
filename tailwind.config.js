@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [],
+  purge: ['./lib/tailwind-helper.vue'],
   theme: {
     extend: {
       screens: {
