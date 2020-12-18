@@ -111,4 +111,10 @@ export default {
 .helper:hover {
   @apply bg-opacity-100;
 }
+.bottom-4 {
+  bottom: 1rem;
+}
+.left-4 {
+  left: 1rem;
+}
 </style>
