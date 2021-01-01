@@ -24,13 +24,17 @@
           md
           <icon name="md" />
         </div>
-        <div class="justify-around hidden lg:flex xl:hidden">
+        <div class="hidden lg:flex xl:hidden">
           lg
           <icon name="lg" />
         </div>
-        <div class="hidden xl:flex">
+        <div class="hidden xl:flex 2xl:hidden">
           xl
           <icon name="xl" />
+        </div>
+        <div class="hidden 2xl:flex">
+          2xl
+          <icon name="2xl" />
         </div>
         <div
           class="flex mx-auto my-auto text-sm"
